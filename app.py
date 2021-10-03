@@ -11,7 +11,10 @@ def hello_world():
 @app.route("/router/<ip_address>")
 def router(ip_address: str):
     connection = Connector(ip_address)
-    return 'hello' + ip_address
+    version = connection.show_router_version()
+    connection.close_conn()
+
+    return 'hello ' + ip_address + " version: " + version
 
 @app.route("/router/validate_router", methods=["POST"])
 def validate_router():
