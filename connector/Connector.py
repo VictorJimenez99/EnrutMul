@@ -18,6 +18,8 @@ class Connector:
         ret = channel.recv(5000)
         return str(ret)
 
+    def enable_manual_routing(self):
+        pass
 
 
     def close_conn(self):
