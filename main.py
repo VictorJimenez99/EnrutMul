@@ -38,3 +38,6 @@ if __name__ == '__main__':
     send_message(channel, "exit")
     send_message(channel, "write")
 
+    channel.close()
+    client.close()
+
